@@ -7,8 +7,6 @@ const apiListAllUsers = async (req: Request, res: Response) => {
         const pageNo: number = req.body.pageNo ? req.body.pageNo : 1
         const perPage: number = req.body.perPage ? req.body.perPage : 5
 
-        console.log(req.params)
-
         let allUser: any = await userService.listAllUser({
             pageNo,
             perPage,

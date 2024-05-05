@@ -1,4 +1,3 @@
-import jwt from 'jsonwebtoken'
 import { HttpStatusCode } from "axios"
 import { Request, Response } from "express"
 import issueJWt from '../utilities/issueJWT'
@@ -6,7 +5,6 @@ import { bcryptFunctions } from '../utilities/bcrypt'
 import issueJWTRefreshToken from '../utilities/issueJWTRefreshToken'
 import authService from '../services/auth.service'
 import userService from '../services/user.service'
-import { UserDocument } from '../interfaces/user.interface'
 
 const registerUserController = async (req: Request, res: Response) => {
     try {
@@ -271,8 +269,6 @@ const returnSuccessfullRegisteredUserData = async (
     res: Response,
     dataFromCreateUser: any
 ) => {
-
-    console.log(dataFromCreateUser)
     return res.status(HttpStatusCode.Ok).json({
         status: true,
         message: "User is registered successfully",

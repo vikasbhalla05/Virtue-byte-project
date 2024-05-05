@@ -1,6 +1,5 @@
 import express from "express"
-import { getUserfromToken, isAuthorizedUser } from "../middlewares/auth.middleware"
-import authController from "../controllers/auth.controller"
+import { isAuthorizedUser } from "../middlewares/auth.middleware"
 import userController from "../controllers/user.controller"
 const userRouter = express.Router()
 

@@ -8,6 +8,7 @@ import config from "./configurations/config"
 import strategy from "./configurations/passport"
 import authRouter from "./routes/auth.route"
 import userRouter from "./routes/user.route"
+import postRouter from "./routes/post.route"
 
 const NAMESPACE = "Admin Server"
 const app = express()
@@ -69,6 +70,7 @@ app.get("/", (_req: Request, res: Response) => {
 
 app.use("/auth", authRouter)
 app.use("/user", userRouter)
+app.use("/post", postRouter)
 
 const httpServer = http.createServer(app)
 

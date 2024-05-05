@@ -38,8 +38,6 @@ const findUserByPhone = async (phone: string) => {
 
 const changePassword = async (id: string, password: string): Promise<any> => {
     try {
-
-        console.log(id, password)
         let changepwd = await usersModel
             .updateOne(
                 { _id: id.toString(), isDeleted: false },
