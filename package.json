@@ -1,0 +1,46 @@
+{
+  "name": "virtue-byte-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "build-container": "npx tsc",
+    "serve": "nodemon app/server.ts",
+    "serve-build": "nodemon build/app/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vikasbhalla05/Virtue-byte-project.git"
+  },
+  "author": "Vikas Bhalla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vikasbhalla05/Virtue-byte-project/issues"
+  },
+  "homepage": "https://github.com/vikasbhalla05/Virtue-byte-project#readme",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "libphonenumber-js": "^1.10.62",
+    "lodash": "^4.17.21",
+    "mongoose": "^8.3.3",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/lodash": "^4.17.1",
+    "@types/node": "^20.12.8",
+    "@types/passport-jwt": "^4.0.1",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
