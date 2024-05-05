@@ -74,9 +74,10 @@ const apiDeletePost = async (req: Request, res: Response) => {
 
         const _deletePost: any = await postService.deletePostsById(postId, user?._id)
 
+        console.log(_deletePost)
         return res.status(HttpStatusCode.Ok).json({
-            status: true,
-            message: "Posts deleted successfully " + postId,
+            status: _deletePost.deletedCount ? true : false,
+            message: _deletePost.deletedCount ? "Posts deleted successfully " + postId : "Post not found",
         })
     } catch (error: any) {
         return res.status(HttpStatusCode.BadRequest).send({
